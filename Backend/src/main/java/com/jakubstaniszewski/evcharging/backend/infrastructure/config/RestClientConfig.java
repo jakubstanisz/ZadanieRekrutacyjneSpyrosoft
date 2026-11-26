@@ -1,5 +1,6 @@
 package com.jakubstaniszewski.evcharging.backend.infrastructure.config;
 
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
@@ -11,6 +12,7 @@ import org.springframework.web.client.RestClient;
  * Configures the {@link RestClient} instance used for communicating with the UK Carbon Intensity API.
  */
 @Configuration
+@EnableConfigurationProperties(CarbonIntensityProperties.class)
 public class RestClientConfig {
 
     @Bean

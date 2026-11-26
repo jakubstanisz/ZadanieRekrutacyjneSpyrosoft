@@ -66,7 +66,7 @@ public class CarbonIntensityApiClient implements GenerationMixProvider {
     private CarbonIntensityApiResponse executeRequest(String fromParam, String toParam) {
         try {
             return restClient.get()
-                    .uri("/generation/{from}/{to}", fromParam, toParam)
+                    .uri("/generation/" + fromParam + "/" + toParam)
                     .accept(MediaType.APPLICATION_JSON)
                     .retrieve()
                     .body(CarbonIntensityApiResponse.class);
